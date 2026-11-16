@@ -3,7 +3,7 @@
 > Une liste de démontage est une affirmation sur les octets qui sont des instructions, et cette leçon construit le décodeur et le graphique qui vérifient la affirmation.
 
 **Type:** Build
-**Languages:** Python, C, x86-64 assembly
+**Languages:** Python, TypeScript, C, x86-64 assembly
 **Prerequisites:** Phase 13 · 32 (ELF from scratch)
 **Time:** ~150 minutes
 
@@ -347,6 +347,7 @@ Exécutez la démo:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 La sortie est un rapport JSON. Pour chaque objet fixe, il donne l'accord oracle. Pour chaque fonction, il donne des instructions, des blocs et des comptes de bord selon les trois méthodes. Il énumère également des blocs inaccessibles, des sauts indirects non résolus, des bordures arrière, des dominateurs immédiats et toutes les tables.
@@ -486,6 +487,7 @@ Vérifiez vos réponses:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/lab.py
+npx tsx code/lab.ts
 ```
 
 Le vérificateur calcule chaque valeur attendue à partir de `code/main.py`Il imprime`PASS`- Je suis là .`FAIL`ou `TODO`pour chaque tâche et un score, et il sort de 0 seulement quand les cinq passent. `python3 code/lab.py my-answers.json`Il vérifie un autre dossier. `code/tests/test_lab.py`prouve que le vérificateur accepte les bonnes réponses et rejette les mauvaises.
@@ -505,6 +507,7 @@ Exécutez la démo et la suite déterministe:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 python3 code/tests/test_main.py
 ```
 

@@ -3,7 +3,7 @@
 > Un programme compilé est un ensemble de tables qui pointent les unes vers les autres. Un lecteur que vous avez écrit donne une sortie que vous pouvez vérifier octet par octet.
 
 **Type:** Build
-**Languages:** Python (stdlib), C (fixture only)
+**Languages:** Python (stdlib), TypeScript, C (fixture only)
 **Prerequisites:** Phase 0 · 01 (Dev Environment) with clang installed, Python 3.10 or later, hexadecimal arithmetic
 **Time:** ~120 minutes
 
@@ -275,6 +275,7 @@ Exécutez le lecteur bibliothécaire standard:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 La démo est là .`ledger-x86_64-O1.o`et imprime son en-tête, sections, symboles, relocations, et la carte de décalage de fichier. Il imprime ensuite les quatre chaînes de fonction en octets, lit `ledger-arm64-O1.o`, et imprime la table de comparaison.`tiny-x86_64`- Les lignes attendues:
@@ -395,6 +396,7 @@ Vérifiez vos réponses:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/lab.py
+npx tsx code/lab.ts
 ```
 
 Le vérificateur calcule chaque valeur attendue à partir de `code/main.py`Il imprime`PASS`- Je suis là .`FAIL`ou `TODO`pour chaque tâche et un score, et il sort de 0 seulement quand les cinq passent. `python3 code/lab.py my-answers.json`Il vérifie un autre dossier. `code/tests/test_lab.py`prouve que le vérificateur accepte les bonnes réponses et rejette les mauvaises.
@@ -414,6 +416,7 @@ Exécutez la démo et la suite déterministe:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 python3 -m unittest discover -s code/tests -v
 ```
 
