@@ -3,7 +3,7 @@
 > Una lista de desmontaje es una afirmación sobre qué bytes son instrucciones, y esta lección construye el decodificador y el gráfico que compruebe la afirmación.
 
 **Type:** Build
-**Languages:** Python, C, x86-64 assembly
+**Languages:** Python, TypeScript, C, x86-64 assembly
 **Prerequisites:** Phase 13 · 32 (ELF from scratch)
 **Time:** ~150 minutes
 
@@ -347,6 +347,7 @@ Ejecutar la demostración:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 El resultado es un informe JSON. Para cada objeto fijo da el acuerdo del oráculo. Para cada función da instrucciones, bloque y recuento de borde bajo los tres métodos. También enumera bloques no alcanzables, saltos indirectos no resueltos, bordes posteriores, dominadores inmediatos y cualquier tabla. Terminará con la comparación de trampas.
@@ -486,6 +487,7 @@ Compruebe sus respuestas:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/lab.py
+npx tsx code/lab.ts
 ```
 
 El verificador calcula cada valor esperado desde `code/main.py`En los accesorios comprometidos.`PASS`¿ Qué ?`FAIL`o `TODO`para cada tarea y una puntuación, y sale de 0 sólo cuando pasan los cinco. `python3 code/lab.py my-answers.json`- ¿Qué? - Vea otro archivo.`code/tests/test_lab.py`prueba que el comprobador acepta las respuestas correctas y rechaza las incorrectas.
@@ -505,6 +507,7 @@ Ejecutar la demostración y la suite determinista:
 ```bash
 cd phases/13-tools-and-protocols/33-disassembly-and-control-flow
 python3 code/main.py
+npx tsx code/main.ts
 python3 code/tests/test_main.py
 ```
 

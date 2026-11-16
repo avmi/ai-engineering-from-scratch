@@ -3,7 +3,7 @@
 > Un programa compilado es un conjunto de tablas que apuntan entre sí. Un lector que escribiste da salida que puedes verificar byte por byte.
 
 **Type:** Build
-**Languages:** Python (stdlib), C (fixture only)
+**Languages:** Python (stdlib), TypeScript, C (fixture only)
 **Prerequisites:** Phase 0 · 01 (Dev Environment) with clang installed, Python 3.10 or later, hexadecimal arithmetic
 **Time:** ~120 minutes
 
@@ -275,6 +275,7 @@ Ejecutar el lector de biblioteca estándar:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 ```
 
 La demostración dice`ledger-x86_64-O1.o`y imprime su encabezado, secciones, símbolos, reubicaciones y mapa de desplazamiento de archivos. Luego imprime las cuatro cadenas de byte de función, lee `ledger-arm64-O1.o`, y imprime la tabla de comparación.`tiny-x86_64`- Las líneas esperadas:
@@ -395,6 +396,7 @@ Compruebe sus respuestas:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/lab.py
+npx tsx code/lab.ts
 ```
 
 El verificador calcula cada valor esperado desde `code/main.py`En los accesorios comprometidos.`PASS`¿ Qué ?`FAIL`o `TODO`para cada tarea y una puntuación, y sale de 0 sólo cuando pasan los cinco. `python3 code/lab.py my-answers.json`- ¿Qué? - Vea otro archivo.`code/tests/test_lab.py`prueba que el comprobador acepta las respuestas correctas y rechaza las incorrectas.
@@ -414,6 +416,7 @@ Ejecutar la demostración y la suite determinista:
 ```bash
 cd phases/13-tools-and-protocols/32-program-anatomy-elf-from-scratch
 python3 code/main.py
+npx tsx code/main.ts
 python3 -m unittest discover -s code/tests -v
 ```
 
